@@ -1,0 +1,75 @@
+<!-- 个人信息 -->
+<!-- 头部 -->
+<!-- 已登录 -->
+<view class="top_root" wx:if="{{user&&user.user_nickname}}">
+  <van-image
+  round
+  width="5rem"
+  height="5rem"
+  src="{{user.user_photo}}"
+  fit="cover"
+/>
+<view class="top_name">{{user.user_nickname}}</view>
+</view>
+<!-- 未登录 -->
+<view wx:else class="top_root">
+  <van-image
+  round
+  width="5rem"
+  height="5rem"
+  src="https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0"
+  fit="cover"
+/>
+<view class="top_name">游客</view>
+</view>
+<!-- 条目 -->
+<!-- <view class="item">
+<button class="item_name">修改资料</button>
+<view class="right_arrow"></view>
+</view>
+
+<view class="item">
+<button class="item_name">修改资料</button>
+<view class="right_arrow"></view>
+</view>
+
+<view class="item">
+<button class="item_name">修改资料</button>
+<view class="right_arrow"></view>
+</view>
+
+<view class="item">
+<button class="item_name">修改资料</button>
+<view class="right_arrow"></view>
+</view>
+
+<view class="item">
+<button class="item_name">反馈建议</button>
+<view class="right_arrow"></view>
+</view>
+
+<view class="item">
+<button class="item_name">修改资料</button>
+<view class="right_arrow"></view>
+</view> -->
+<!-- 登录状态 -->
+<view wx:if="{{user&&user.user_nickname}}">
+  <van-button icon="star-o" block type="default" >修改资料</van-button>
+  <van-button icon="star-o" block type="default" bindtap="logOut" >退出登录</van-button>
+</view>
+<!-- 未登录 -->
+<view wx:else="{{!user&&user.user_nickname}}">
+  <van-button icon="star-o" block type="default" bindtap="logIn">立即登录</van-button>
+</view>
+
+<van-button icon="star-o" block type="default">按钮</van-button>
+<van-button icon="star-o" block type="default">按钮</van-button>
+<van-button icon="star-o" block type="default">按钮</van-button>
+<van-button icon="star-o" block type="default">按钮</van-button>
+<van-button icon="star-o" block type="default">按钮</van-button>
+
+<view>{{user._openid}}</view>
+<view>{{user.user_nickname}}</view>
+
+
+

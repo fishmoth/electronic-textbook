@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<!-- 通知栏 -->
+<!-- 文字较短时，通过设置 scrollable 属性开启滚动播放 -->
+<van-notice-bar scrollable text="在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。" />
+<!-- 轮播图 -->
+<swiper indicator-dots circular autoplay="true">
+  <swiper-item wx:for="{{swiperList}}" wx:key="id">
+    <image src="{{item.image}}" mode=""/>
+  </swiper-item>
+</swiper>
+
+<van-collapse accordion value="{{ activeNames }}" bind:change="onChange">
+  <van-collapse-item title="标题1" name="1">
+    <van-grid column-num="3">
+  <van-grid-item icon="photo-o" text="文字" wx:for="{{ 6 }}" />
+</van-grid>
+  </van-collapse-item>
+  <van-collapse-item title="标题2" name="2">
+    代码是写出来给人看的，附带能在机器上运行
+  </van-collapse-item>
+  <van-collapse-item title="标题3" name="3" disabled>
+    代码是写出来给人看的，附带能在机器上运行
+  </van-collapse-item>
+</van-collapse>
+
+<van-grid clickable column-num="2">
+  <van-grid-item
+    icon="home-o"
+    link-type="navigateTo"
+    url="/pages/user/user"
+    text="Navigate 跳转"
+  />
+  <van-grid-item
+    link-type="reLaunch"
+    url="/pages/user/user"
+    use-slot
+  >
+  <image
+      style="width: 100%; height: 90px;"
+      src="https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0"
+    />
+  </van-grid-item>
+</van-grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

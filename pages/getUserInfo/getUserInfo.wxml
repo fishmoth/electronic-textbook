@@ -1,0 +1,72 @@
+
+<!-- <view class="item">  
+<view class="tip">编辑用户昵称</view>  
+<input type="nickname" bindinput="getName" /> 
+</view> 
+
+<view class="line"></view> 
+
+<view class="item" bindtap="chooseImage"> 
+<view class="tip">点击修改头像</view>  
+<image src="{{avatarUrl}}" /> 
+</view>  -->
+
+<!-- <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+  <image class="avatar" src="{{avatarUrl}}"></image>
+</button> 
+<input type="nickname" class="weui-input" placeholder="请输入昵称"/> -->
+
+<!-- 头像 -->
+<!-- <view class="head">
+  <van-button icon="https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0" color="white" block size="large">
+</van-button>
+</view> -->
+
+
+
+<!-- <van-cell-group>
+  <van-field type="nickname"
+    value="{{ username }}"
+    label="用户名"
+    placeholder="请输入用户名"
+    error
+  />
+</van-cell-group>
+
+
+<view class="submit">
+  <van-button type="primary" form-type="submit"  round="true" size="normal" >确定</van-button>
+</view>
+
+
+<view class="button-head">
+  <button type="primary" size="mini">确定</button>
+</view> -->
+
+<view class="container">
+  <view class="page-body">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+
+      <button class="message" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+        <van-image class="logo" round fit="cover" width="5rem" height="5rem" src="{{photoUrl}}" />
+        <view>选择头像</view>
+      </button>
+
+      <view class="page-section">
+
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd" style="margin: 30rpx 0">
+              <input type="nickname" model:value="{{nickName}}" class="weui-input" name="input" placeholder="请输入您的昵称" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="btn-area">
+        <button style="margin: 30rpx 0" type="primary" bindtap="register">确认</button>
+      </view>
+    </form>
+  </view>
+
+</view>
